@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Yashasvi ❤️</title>
+
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffb6c1, #ffe6f2);
+    color: #d63384;
+    overflow: hidden;
+}
+
+/* Main Box */
+.container {
+    margin-top: 80px;
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px pink;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Heading */
+h1 {
+    font-size: 2.5em;
+}
+
+/* Image */
+.love-img {
+    width: 250px;
+    border-radius: 15px;
+    margin: 15px 0;
+    transform: rotate(0deg); /* Change if image is rotated */
+}
+
+/* Buttons */
+button {
+    font-size: 18px;
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#yes {
+    background: #ff4d88;
+    color: white;
+}
+
+#yes:hover {
+    background: #ff1a66;
+}
+
+#no {
+    background: #ccc;
+    color: #555;
+}
+
+/* Hidden */
+.hidden {
+    display: none;
+}
+
+/* Celebration */
+#celebration img {
+    width: 250px;
+    margin-top: 15px;
+}
+
+/* Falling Hearts */
+.heart {
+    position: fixed;
+    top: -10px;
+    font-size: 20px;
+    animation: fall linear forwards;
+    color: red;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<h1>Will You Be My Valentine? 💖</h1>
+
+<p>
+Hey <b>Yashasvi ❤️</b><br><br>
+I've been thinking about you all day.  
+You're the best thing that's ever happened to me.  
+Will you make me the happiest person and say yes?
+</p>
+
+<!-- Replace this with your own photo -->
+<img src="https://via.placeholder.com/300x300/ff69b4/ffffff?text=My+Love"
+     class="love-img">
+
+<br>
+
+<button id="yes">Yes! 💕</button>
+<button id="no">No 🙈</button>
+
+<div id="celebration" class="hidden">
+
+    <h2>Yayyyy!!! 🎉💖</h2>
+
+    <p>
+    I knew you'd say yes, meri jaan 🥰<br>
+    You are my forever ❤️<br><br>
+    I Loveeee Youuuu Sooo sooo Muchhhh 💞😘😘😘😘
+    </p>
+
+    <img src="https://via.placeholder.com/300x250/ffb6c1/ffffff?text=Love+Forever">
+
+</div>
+
+</div>
+
+<script>
+
+/* Buttons */
+const yesBtn = document.getElementById('yes');
+const noBtn = document.getElementById('no');
+const celebration = document.getElementById('celebration');
+
+/* YES Button */
+yesBtn.addEventListener('click', () => {
+
+    celebration.classList.remove('hidden');
+
+    yesBtn.style.display = 'none';
+    noBtn.style.display = 'none';
+
+    startHearts();
+
+    alert("Yayyy! I Loveeeee Youuuuuu cutuuuuuu ❤️🥰");
+
+});
+
+/* NO Button Runs Away */
+noBtn.addEventListener('mouseover', () => {
+
+    noBtn.style.position = 'absolute';
+
+    noBtn.style.left = Math.random() * 80 + '%';
+    noBtn.style.top = Math.random() * 80 + '%';
+
+});
+
+
+/* Falling Hearts Function */
+function startHearts() {
+
+    setInterval(() => {
+
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+
+        heart.innerHTML = '❤️';
+
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 5000);
+
+    }, 300);
+}
+
+</script>
+
+</body>
+</html>
